@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import "../App.css";
+
+// Dummy data here
+let myDummyData = [];
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -11,6 +16,7 @@ function Signup() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // console.log(value);
     setFormData({
       ...formData,
       [name]: value,
@@ -20,7 +26,9 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can implement your signup logic, for example, send the form data to a backend API
-    console.log("Form submitted:", formData);
+    myDummyData.push(formData);
+    // console.log("Form submitted:", formData);
+    console.log(myDummyData);
   };
 
   return (
@@ -28,6 +36,26 @@ function Signup() {
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
+          {/* <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "25ch" },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              id="outlined-basic"
+              label="Outlined"
+              variant="outlined"
+            />
+            <TextField id="filled-basic" label="Filled" variant="filled" />
+            <TextField
+              id="standard-basic"
+              label="Standard"
+              variant="standard"
+            />
+          </Box> */}
           <input
             type="text"
             placeholder="First Name"

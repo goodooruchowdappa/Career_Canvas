@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import CreateNewResume from "./Pages/CreateNewResume";
+import FileUploader from "./Pages/FileUploader";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/create" element={<CreateNewResume />}></Route>
+        <Route path="/importfile" element={<FileUploader />}></Route>
       </Routes>
     </BrowserRouter>
   );
