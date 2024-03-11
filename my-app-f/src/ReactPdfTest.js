@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
-function FileUploader() {
+function Pdf() {
   const [file, setFile] = useState(null);
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -108,5 +108,4 @@ function FileUploader() {
   );
 }
 
-
-export default FileUploader;
+export default Pdf;

@@ -1,0 +1,26 @@
+/* NavBar.css */
+.nav-menu {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #D7A449;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    margin: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color:#03081B;
+    border-radius: 50px;
+    color:rgb(223, 248, 129);
+    
+}
