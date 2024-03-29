@@ -4,7 +4,7 @@
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyCqREjyc_7rSz3OfNpRmNkdMfsinnmEhuU",
   authDomain: "resume-1d18e.firebaseapp.com",
   projectId: "resume-1d18e",
@@ -15,3 +15,4 @@ export const firebaseConfig = {
 
 // Initialize Firebase
 
+export default firebaseConfig;
