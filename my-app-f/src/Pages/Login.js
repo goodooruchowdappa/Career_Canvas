@@ -4,26 +4,14 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Email } from "@mui/icons-material";
 
 function Login() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [error, setError] = React.useState(null);
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const auth = getAuth();
@@ -31,30 +19,28 @@ function Login() {
       navigate("/");
     } catch (error) {
       setError(error.message);
-      alert("Invalid email or password");
     }
   };
 
   return (
     <div className="login-box">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      {error && <div className="error">{error}</div>}
+      <form onSubmit={handleLogin}>
         <div className="user-box">
           <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <label>Username</label>
+          <label>Email</label>
         </div>
         <div className="user-box">
           <input
             type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
           <label>Password</label>
