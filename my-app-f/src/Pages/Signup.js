@@ -1,62 +1,79 @@
 import React, { useState } from "react";
 import "./signup.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function Signup() {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const createAccount = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    try {
+      if (password !== confirmPassword) {
+        setError("Password do not match");
+        return;
+      }
+      await createUserWithEmailAndPassword(getAuth(), email, password);
+      navigate("/login");
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
     <div className="signup-box">
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="user-box">
+      <h2>Create Account</h2>
+      {error && <p className="error">{error}</p>}
+      <form>
+        <div className="user-box hi">
           <input
             type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
-          <label>Username</label>
+          <label>First Name</label>
         </div>
         <div className="user-box">
           <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <label>Last Name</label>
+        </div>
+        <div className="user-box">
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <label>Email</label>
         </div>
         <div className="user-box">
           <input
             type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <label>Password</label>
         </div>
-        <button type="submit">
+        <div className="user-box">
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <label>Confirm Password</label>
+        </div>
+        <button onClick={createAccount}>
           <span></span>
           <span></span>
           <span></span>
