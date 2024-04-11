@@ -81,7 +81,7 @@ function Signup() {
           Submit
         </button>
       </form>
-      <Link to="/login" className="login-link">
+      <Link to="/" className="login-link">
         You already have an account? Login
       </Link>
     </div>

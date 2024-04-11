@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "../App.css";
+import "./home.css";
 import { FaAngleDoubleRight } from "react-icons/fa";
-
+import NavBar from "../NavBar";
 
 const MyCard = ({ content, linkToPath }) => {
   return (
@@ -9,9 +9,9 @@ const MyCard = ({ content, linkToPath }) => {
       <div className="cards">
         <div className="card">
           <div className="cardContent">
-            <h1>{content}</h1>
+            <h1 className="heading">{content}</h1>
             <Link className="link-css" to={linkToPath}>
-              <FaAngleDoubleRight size={30} />
+              <FaAngleDoubleRight size={50} />
             </Link>
           </div>
         </div>
@@ -23,10 +23,11 @@ const MyCard = ({ content, linkToPath }) => {
 function Home() {
   return (
     <>
-      <h1>This is Home Page</h1>
+      <NavBar />
       <div className="card-container">
         <MyCard content="Create New One" linkToPath="/create" />
         <MyCard content="Choose From File" linkToPath="/importfile" />
+        <MyCard content="Portfolio Generator" linkToPath="/portfolio" />
       </div>
     </>
   );

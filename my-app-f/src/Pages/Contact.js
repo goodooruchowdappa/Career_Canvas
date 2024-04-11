@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import NavBar from "../NavBar";
+import "./contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -53,53 +55,69 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-form">
-      <h1>Contact Us</h1>
-      {isSubmitted ? (
-        <p className="success-message">
-          Thank you for your message! We'll get back to you soon.
-        </p>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <button type="submit" disabled={isSubmitted}>
-            {isSubmitted ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      )}
-    </section>
+    <>
+      <NavBar />
+      <section className="contact-form">
+        <h1 style={{ color: "#007bff" }}>Contact Us</h1>
+        {isSubmitted ? (
+          <p className="success-message" style={{ color: "green" }}>
+            Thank you for your message! We'll get back to you soon.
+          </p>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name" style={{ color: "#007bff" }}>
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email" style={{ color: "#007bff" }}>
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message" style={{ color: "#007bff" }}>
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            {errorMessage && (
+              <p className="error-message" style={{ color: "red" }}>
+                {errorMessage}
+              </p>
+            )}
+            <button
+              type="submit"
+              disabled={isSubmitted}
+            >
+              {isSubmitted ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        )}
+      </section>
+    </>
   );
 };
 

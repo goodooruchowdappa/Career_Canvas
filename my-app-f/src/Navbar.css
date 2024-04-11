@@ -1,10 +1,13 @@
 /* NavBar.css */
 .nav-menu {
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    padding: 10px;
-    margin: 0;
+    padding-right: 30px;
+    height: 85px;
     background-color: #131213;
-    width: 100vw;
 }
 
 .nav-item {
@@ -17,11 +20,24 @@
     text-decoration: none;
     color: #fff;
     padding: 10px;
+    font-size:large;
+    border-radius: 10px;
+        cursor: pointer;
+        background-color: #000;
 }
 
 .nav-link:hover {
-    background-color:#20347f;
-    border-radius: 50px;
-    color:rgb(223, 248, 129);
+background: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
     
+}
+.logo-img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
 }
