@@ -1,0 +1,128 @@
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align:justify;
+    /* Subtle shadow for depth */
+}
+
+.about-us-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #007bff;
+    /* Blue heading */
+}
+
+.about-us-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #000;
+    /* Black text */
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+}
+
+.team-member {
+    text-align: center;
+    margin: 30px;
+    background-color: #000;
+    /* Black background for team member section */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.team-member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 60%;
+    border: 3px dotted #fff;
+    /* Black border */
+}
+
+.team-member-name {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #007bff;
+    /* Blue text */
+}
+
+.team-member-bio {
+    font-size: 1em;
+    color: #fff;
+    /* White text for bio */
+    line-height: 1.5;
+    /* Adjust line spacing for better readability */
+}
+.hr{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.social-links {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: #007bff;
+    /* Blue for social links */
+    font-size: 1.2em;
+}
+
+.social-links li a:hover {
+    color: #2980b9;
+    /* Slightly darker blue on hover */
+}
+.footer {
+    background-color: #000;
+    /* Dark blue background */
+    color: #fff;
+    /* White text */
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.footer-text {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: inherit;
+    font-size: 1.2em;
+}
+
+.social-links li a:hover {
+    color:#000;
+    /* Lighter blue on hover */
+}

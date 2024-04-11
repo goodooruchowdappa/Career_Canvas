@@ -89,7 +89,7 @@ function Body() {
         <ReactToPrint
           trigger={() => {
             return (
-              <button>
+              <button className="download-btn">
                 Download <ArrowDown />
               </button>
             );

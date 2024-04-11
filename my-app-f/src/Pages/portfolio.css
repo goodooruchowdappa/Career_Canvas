@@ -1,0 +1,184 @@
+/* App.css */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    color: #000;
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 800px;
+    padding: 30px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        width: 300px;
+        border-radius: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #000;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+}
+
+
+
+/* Portfolio Preview */
+.portfolio {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 60%;
+    padding: 30px;
+}
+
+.portfolio h2 {
+    color: #333;
+}
+
+.portfolio .preview {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+}
+
+.portfolio .photo {
+    flex: 0 0 30%;
+    /* Set photo width */
+    margin-right: 20px;
+}
+
+.portfolio .photo img {
+    max-width: 100%;
+    /* Make photo responsive */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
+}
+
+.portfolio .details {
+    flex: 1;
+    /* Take remaining space */
+}
+
+.portfolio h3 {
+    color: #007bff;
+}
+
+.portfolio h4 {
+    color: #555;
+    margin-top: 15px;
+}
+
+.portfolio p {
+    color: #777;
+}
+
+/* Portfolio.css */
+.options-container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+button {
+position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    width: 300px;
+    border-radius: 10px;
+}
+button:hover{
+    background: #000;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+}
+
+.options {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.options button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: #ddd;
+}

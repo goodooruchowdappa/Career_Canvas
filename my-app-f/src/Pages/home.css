@@ -1,0 +1,193 @@
+/* card style-start */
+.link-css {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20%;
+}
+.heading{
+    color: #fff;
+}
+
+.link-css:hover {
+        color: #fff;
+        border-radius: 40%;
+        box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+    transition: 0.7s;
+}
+
+.card-container {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #131213;
+    border-radius: 20px;
+    min-height: 250px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 30px 30px 30px 0 gray;
+}
+
+.container:hover {
+    transform: translateY(10px);
+    transition: 1s;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 5px -10px 0px 0px #03e9f4;
+    height: 100%;
+    margin: 0 1.5% 0 1.5%;
+    display: flex;
+    position: relative;
+    transition: 1s;
+    margin-top: 80px;
+}
+
+.cardContent {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardContent h1 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 2vw;
+}
+
+.cardContent p {
+    font-size: 3.5vh;
+    padding: 5%;
+    color: #fff;
+}
+
+.cardContent input {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.card:hover {
+    transform: translateY(-30px);
+}
+
+.card::after {
+    content: '';
+    border-left: 10px solid #fff !important;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+}
+
+.card::before {
+    content: '';
+    border-bottom: 5px solid #fff !important;
+    position: absolute;
+    right: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.card:hover::before {
+    animation-name: animateBorderBottom;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.card:hover::after {
+    animation-name: animateBorderLeft;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.card::after {
+    animation-name: animateBorderLeftRev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.card::before {
+    animation-name: animateBorderBottomRev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateBorderLeft {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 5%;
+    }
+}
+
+@keyframes animateBorderLeftRev {
+    0% {
+        top: 5%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes animateBorderBottom {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 5%;
+    }
+}
+
+@keyframes animateBorderBottomRev {
+    0% {
+        right: 5%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@media screen and (max-width:725px) {
+    .cards {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 1.5% 0;
+        height: 300px;
+        width: 80%;
+    }
+
+    .card:hover {
+        transform: translateX(-30px);
+    }
+}
+
+/* card style-end */
