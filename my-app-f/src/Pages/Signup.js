@@ -33,7 +33,7 @@ function Signup() {
       <h2>Create Account</h2>
       {error && <p className="error">{error}</p>}
       <form>
-        <div className="user-box hi">
+        <div className="user-box">
           <input
             type="text"
             value={firstName}

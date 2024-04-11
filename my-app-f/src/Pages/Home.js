@@ -25,9 +25,9 @@ function Home() {
     <>
       <NavBar />
       <div className="card-container">
-        <MyCard content="Create New One" linkToPath="/create" />
-        <MyCard content="Choose From File" linkToPath="/importfile" />
-        <MyCard content="Portfolio Generator" linkToPath="/portfolio" />
+        <MyCard content="Create New One" linkToPath="/home/create" />
+        <MyCard content="Choose From File" linkToPath="/home/choosefile" />
+        <MyCard content="Portfolio Generator" linkToPath="/home/portfolio" />
       </div>
     </>
   );
