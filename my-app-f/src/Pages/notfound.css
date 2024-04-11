@@ -1,0 +1,36 @@
+.not-found {
+    background-color: hsl(250, 80%, 80%);
+    /* Initial background color */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    padding: 50px;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+p{
+    color: #000;
+}
+
+/* Animation for color change */
+@keyframes color-shift {
+    0% {
+        background-color: hsl(250, 80%, 80%);
+    }
+
+    50% {
+        background-color: hsl(180, 80%, 80%);
+    }
+
+    100% {
+        background-color: hsl(100, 80%, 80%);
+    }
+}
+
+.not-found {
+    animation: color-shift 10s ease-in-out infinite;
+}

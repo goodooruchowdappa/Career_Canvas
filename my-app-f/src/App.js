@@ -8,6 +8,7 @@ import Signup from "./Pages/Signup";
 import CreateNewResume from "./Pages/CreateNewResume";
 import FileUploader from "./Pages/FileUploader";
 import Portfolio from "./Pages/Portfolio";
+import NotFound from "./Pages/Notfound";
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
-        <Route path="/create" element={<CreateNewResume />}></Route>
-        <Route path="/importfile" element={<FileUploader />}></Route>
-        <Route path="/portfolio" element={<Portfolio/>}></Route>
+        <Route path="/home/create" element={<CreateNewResume />}></Route>
+        <Route path="/home/choosefile" element={<FileUploader />}></Route>
+        <Route path="/home/portfolio" element={<Portfolio />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   );
