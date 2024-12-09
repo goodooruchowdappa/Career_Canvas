@@ -37,9 +37,9 @@ const About = () => {
       ],
     },
     {
-      name: "Sharath Chandra",
+      name: "Sharath",
       image: sharth, // Replace with your friend's image path
-      bio: `MERN full stack developer specializing in crafting intuitive web applications. Proficient in MongoDB, Express.js, React.js, and Node.js. Experienced in building dynamic projects like resume builders. Passionate about creating seamless user experiences and driving innovation in web development.`,
+      bio: `Dynamic MERN Full Stack Developer dedicated to sculpting user-centric web applications. Adept in MongoDB, Express.js, React.js, and Node.js. Seasoned in crafting interactive projects such as resume builders. Driven by a fervor for delivering polished user experiences and pioneering advancements in web development.`,
       socialLinks: [
         {
           link: "https://your-friend-website.com",
@@ -78,6 +78,7 @@ const About = () => {
           our intuitive tools and resources are designed to meet your needs.
           Join us on this journey and unlock the potential of your resume today!
         </p>
+        <h1 className="about-us-title">Our Team</h1>
         <h3>
           Chowdappa (Lead Developer, UX/UI Designer) - With expertise in MERN
           full stack development, Chowdappa leads our development team with a
@@ -122,12 +123,57 @@ const About = () => {
           ))}
         </div>
         <p className="about-us-description">
+          1. **User-Friendly Interface:** Our platform boasts a sleek and
+          intuitive interface designed to guide you through the resume-building
+          process seamlessly. Say goodbye to complicated layouts and confusing
+          menus – with our user-friendly platform, creating a professional
+          resume has never been easier. <br />
+          <br />
+          2. **Customizable Templates:** We understand that every individual is
+          unique, and so are their career paths. That's why we offer a wide
+          range of customizable templates to suit your style and preferences.
+          Whether you prefer a clean and minimalist design or something more
+          creative and eye-catching, we've got you covered.
+          <br /> <br />
+          3. **Dynamic Content Suggestions:** Stuck on what to include in your
+          resume? Our platform offers dynamic content suggestions based on your
+          industry, experience level, and career objectives. From key skills and
+          accomplishments to relevant keywords and phrases, we'll help you craft
+          a compelling resume that stands out to employers.
+          <br />
+          <br />
+          4. **Real-Time Feedback:** Worried about making mistakes? Don't fret –
+          our platform provides real-time feedback and suggestions to help you
+          optimize your resume for success. From spelling and grammar checks to
+          formatting tips and best practices, we'll ensure that your resume is
+          polished and professional.
+          <br />
+          <br /> 5. **Mobile Compatibility:** In today's fast-paced world, you
+          need a resume that's accessible anytime, anywhere. That's why our
+          platform is fully optimized for mobile devices, allowing you to
+          create, edit, and update your resume on the go. Whether you're
+          commuting to work or waiting in line, you can take control of your
+          career with ease. <br />
+          <br />
+          6. **Expert Support:** Need help or have a question? Our team of
+          experienced developers and support staff are here to assist you every
+          step of the way. Whether you're facing technical difficulties or need
+          advice on crafting the perfect resume, we're just a click away. <br />
+          <br />
+          7. **Career Resources:** Building a resume is just the first step on
+          your career journey. That's why we offer a range of additional
+          resources, including interview tips, career advice, and industry
+          insights, to help you succeed in today's competitive job market.{" "}
+        </p>
+        <p className="about-us-description">
           Together, we are committed to providing you with the tools and support
           you need to create a standout resume and achieve your career goals.
-          <br />
-          Thank you for choosing our platform—we're excited to be a part of your
-          journey!
         </p>
+        <h3>
+          Join the thousands of satisfied users who have already unlocked the
+          potential of their resumes with our platform. Sign up today and take
+          the next step towards your dream career!..................
+        </h3>
         <footer className="footer">
           <p className="footer-text">
             © 2024 Resume Builder. All Rights Reserved.

@@ -15,6 +15,7 @@ const Resume = forwardRef((props, ref) => {
   const information = props.information;
   const sections = props.sections;
   const containerRef = useRef();
+   
 
   const [columns, setColumns] = useState([[], []]);
   const [source, setSource] = useState("");
