@@ -57,66 +57,70 @@ const Contact = () => {
   return (
     <>
       <NavBar />
-      <section className="contact-form">
-        <h1 style={{ color: "#007bff" }}>Contact Us</h1>
-        {isSubmitted ? (
-          <p className="success-message" style={{ color: "green" }}>
-            Thank you for your message! We'll get back to you soon.
-          </p>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name" style={{ color: "#007bff" }}>
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email" style={{ color: "#007bff" }}>
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message" style={{ color: "#007bff" }}>
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            {errorMessage && (
-              <p className="error-message" style={{ color: "red" }}>
-                {errorMessage}
-              </p>
-            )}
-            <button
-              type="submit"
-              disabled={isSubmitted}
-            >
-              {isSubmitted ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-        )}
-      </section>
+      <div>
+        <section className="contact-form">
+          <h1 style={{ color: "#007bff" }}>Contact Us</h1>
+          {isSubmitted ? (
+            <p className="success-message" style={{ color: "green" }}>
+              Thank you for your message! We'll get back to you soon.
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name" style={{ color: "#007bff" }}>
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email" style={{ color: "#007bff" }}>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message" style={{ color: "#007bff" }}>
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              {errorMessage && (
+                <p className="error-message" style={{ color: "red" }}>
+                  {errorMessage}
+                </p>
+              )}
+              <button type="submit" disabled={isSubmitted}>
+                {isSubmitted ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          )}
+        </section>
+      </div>
+      <div>
+        <h2>Name: Sai chowdappa</h2>
+        <p>Email: chowdappa@gmail.com</p>
+        <p>Message: Hello</p>
+      </div>
     </>
   );
 };

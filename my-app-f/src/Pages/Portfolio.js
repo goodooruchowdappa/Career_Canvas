@@ -20,6 +20,7 @@ function Portfolio() {
       ...prevState,
       [name]: value,
     }));
+    console.log(e.target.value);
   };
 
   // Function to handle photo upload
